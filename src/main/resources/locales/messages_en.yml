@@ -1,0 +1,51 @@
+# English Messages for Whitelist Plugin
+# Supports color codes: &a, &c, &e, etc.
+
+# General messages
+no-permission: "&cYou don't have permission to execute this command."
+unknown-command: "&cUnknown command: %command%"
+
+# Commands
+command-usage: "&eUsage: /%command% %usage%"
+
+help-header: "&6=== Whitelist Commands ==="
+help-add: "&e/%command% add <name> &7- add player to whitelist"
+help-remove: "&e/%command% remove <name> &7- remove player from whitelist"
+help-list: "&e/%command% list &7- show whitelist"
+help-reload: "&e/%command% reload &7- reload whitelist"
+help-migrate: "&e/%command% migrate <from> <to> &7- migrate data between storage types"
+
+# Adding player
+player-already-whitelisted: "&ePlayer is already whitelisted: %player%"
+player-added: "&aPlayer %player% added to whitelist."
+
+# Removing player
+player-not-found: "&ePlayer not found in whitelist: %player%"
+player-removed: "&cPlayer %player% removed from whitelist."
+
+# List
+whitelist-empty: "&eWhitelist is empty."
+whitelist-header: "&aWhitelisted players (%count%):"
+
+# Reload
+whitelist-reloaded: "&eWhitelist reloaded."
+
+# Migration
+migration-started: "&eMigration started from %from% to %to%..."
+migration-completed: "&aMigration completed! Migrated %count% players."
+migration-failed: "&cMigration failed: %error%"
+migration-same-type: "&eSource and target storage types are the same."
+migration-invalid-type: "&cInvalid storage type: %type%. Available types: file, sqlite, mysql"
+
+# Kick messages
+not-whitelisted-kick: |
+  &c&lYou are not whitelisted!
+  
+  &7Contact the administration for access.
+  
+  &8Your nickname: &f%player%
+
+not-whitelisted-login: |
+  &c&lYou are not whitelisted!
+  
+  &7Contact the administration for access.

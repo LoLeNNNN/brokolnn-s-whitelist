@@ -1,0 +1,44 @@
+# BrokolInn's Whitelist Plugin Configuration
+
+# Storage configuration
+storage:
+  type: file # Options: file, sqlite, mysql
+  last-type: none # Автоматически устанавливается плагином для миграций
+
+# MySQL configuration (only used if storage.type = mysql)
+mysql:
+  host: localhost
+  port: 3306
+  database: whitelistdb
+  username: root
+  password: password
+
+# SQLite configuration (only used if storage.type = sqlite)
+sqlite:
+  file: whitelist.db
+
+# Language settings
+language: auto # Options: auto, en, ru
+# auto - detects player's locale automatically
+# en - always use English
+# ru - always use Russian
+
+# Настройки доступа / Access settings
+permissions:
+  require-permission: true
+
+kick-messages:
+  not-whitelisted:
+    title: "&c&lYou are not whitelisted!"
+    subtitle: "&7Contact administration for access"
+    description: |
+      &c&lВы не в вайтлисте!
+      
+      &7Оставьте заявку на сайте или дискорде.
+      
+      &8Ваш ник: &f%player%
+
+# Настройки автоматической миграции
+migration:
+  auto-migrate: false # Автоматически мигрировать при смене типа хранилища
+  backup-before-migration: true # Создавать резервную копию перед миграцией

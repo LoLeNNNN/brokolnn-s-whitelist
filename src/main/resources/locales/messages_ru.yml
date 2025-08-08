@@ -1,0 +1,51 @@
+# Русские сообщения для плагина Вайтлист
+# Поддерживаются цветовые коды: &a, &c, &e и т.д.
+
+# Общие сообщения
+no-permission: "&cУ вас нет прав для выполнения этой команды."
+unknown-command: "&cНеизвестная команда: %command%"
+
+# Команды
+command-usage: "&eИспользование: /%command% %usage%"
+
+help-header: "&6=== Команды вайтлиста ==="
+help-add: "&e/%command% add <имя> &7- добавить игрока в вайтлист"
+help-remove: "&e/%command% remove <имя> &7- удалить игрока из вайтлиста"
+help-list: "&e/%command% list &7- показать вайтлист"
+help-reload: "&e/%command% reload &7- перезагрузить вайтлист"
+help-migrate: "&e/%command% migrate <откуда> <куда> &7- мигрировать данные между типами хранилища"
+
+# Добавление игрока
+player-already-whitelisted: "&eИгрок уже в вайтлисте: %player%"
+player-added: "&aИгрок %player% добавлен в вайтлист."
+
+# Удаление игрока
+player-not-found: "&eИгрок не найден в вайтлисте: %player%"
+player-removed: "&cИгрок %player% удалён из вайтлиста."
+
+# Список
+whitelist-empty: "&eВайтлист пуст."
+whitelist-header: "&aИгроки в вайтлисте (%count%):"
+
+# Перезагрузка
+whitelist-reloaded: "&eВайтлист перезагружен."
+
+# Миграция
+migration-started: "&eНачата миграция с %from% на %to%..."
+migration-completed: "&aМиграция завершена! Перенесено %count% игроков."
+migration-failed: "&cОшибка миграции: %error%"
+migration-same-type: "&eИсходный и целевой типы хранилища одинаковы."
+migration-invalid-type: "&cНеверный тип хранилища: %type%. Доступные типы: file, sqlite, mysql"
+
+# Сообщения кика
+not-whitelisted-kick: |
+  &c&lВы не в вайтлисте!
+  
+  &7Обратитесь к администрации для получения доступа.
+  
+  &8Ваш ник: &f%player%
+
+not-whitelisted-login: |
+  &c&lВы не в вайтлисте!
+  
+  &7Обратитесь к администрации для получения доступа.

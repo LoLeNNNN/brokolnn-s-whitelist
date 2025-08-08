@@ -1,0 +1,46 @@
+name: brokolnnsWhitelist
+version: '1.1'
+main: org.src.brokolnnSWhitelist.BrokolnnSWhitelist
+api-version: '1.21'
+authors: [ brokolnn ]
+description: Простой и гибкий плагин для управления вайтлистом с поддержкой различных типов хранилищ и системой миграции
+
+commands:
+  whitelist:
+    aliases: [bwl]
+    description: Управление вайтлистом
+    usage: |
+      /<command> add <ник> - добавить игрока в вайтлист
+      /<command> remove <ник> - удалить игрока из вайтлиста  
+      /<command> list - показать всех игроков в вайтлисте
+      /<command> reload - перезагрузить вайтлист
+      /<command> migrate <откуда> <куда> - мигрировать данные между типами хранилища
+
+permissions:
+  whitelist.manage:
+    description: Полный доступ к управлению вайтлистом
+    default: op
+    children:
+      whitelist.manage.add: true
+      whitelist.manage.remove: true
+      whitelist.manage.list: true
+      whitelist.manage.reload: true
+      whitelist.manage.migrate: true
+  whitelist.manage.add:
+    description: Позволяет добавлять игроков в вайтлист
+    default: op
+  whitelist.manage.remove:
+    description: Позволяет удалять игроков из вайтлиста
+    default: op
+  whitelist.manage.list:
+    description: Позволяет просматривать вайтлист
+    default: op
+  whitelist.manage.reload:
+    description: Позволяет перезагружать вайтлист
+    default: op
+  whitelist.manage.migrate:
+    description: Позволяет выполнять миграцию данных между хранилищами
+    default: op
+  whitelist.*:
+    description: Все права на управление вайтлистом
+    default: op
